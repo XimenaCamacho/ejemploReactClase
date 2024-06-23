@@ -19,7 +19,7 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path="/" index element={<Characters />} />
+              <Route path="/ejemploReactClase" index element={<Characters />} />
               <Route path="/character/:id" element={<CharacterDetails />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
