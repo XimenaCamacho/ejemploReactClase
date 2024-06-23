@@ -1,0 +1,56 @@
+.character-details{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+.character-details img {
+    width: 85%;
+    border: 1px solid #ddd;
+}
+.character-details p{
+    margin-bottom: 3px;
+}
+
+.character_detail-button-nav {
+    border-radius: 50%;
+    height: 25px; /* Ajusta el tamaño del botón según sea necesario */
+    width: 25px; /* Ajusta el tamaño del botón según sea necesario */
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.character_detail-button-nav:hover{
+    color: #1d1c1c;
+}
+.character_detail-button{
+    border: none;
+    border-radius: 5px;
+    background-color: #1d1c1c;
+    color: #fff;
+    padding: 7px 15px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.character_detail-button:hover{
+    background-color: #4e4e4e;
+}
+
