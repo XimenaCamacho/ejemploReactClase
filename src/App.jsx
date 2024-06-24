@@ -12,13 +12,15 @@ import CharacterDetails from "./Components/CharacterDetails";
 import "./App.css";
 
 function App() {
+  const basename =
+    process.env.NODE_ENV === "production" ? "/your-repo-name" : "";
   return (
     <div className="app-container">
       <UserProvider>
         <CharacterProvider>
           <Header />
           <main>
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router basename={basename}>
               <Routes>
                 <Route path="/" index element={<Characters />} />
                 <Route path="/character/:id" element={<CharacterDetails />} />
