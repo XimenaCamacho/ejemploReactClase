@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import { UserProvider } from "./Components/Contexts/UserContext";
 import { CharacterProvider } from "./Components/Contexts/CharacterContext";
 import Characters from "./Components/Characters";
@@ -18,14 +18,16 @@ function App() {
         <CharacterProvider>
           <Header />
           <main>
-            <Routes>
-              <Route path="/ejemploReactClase" index element={<Characters />} />
-              <Route path="/character/:id" element={<CharacterDetails />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/*" element={<NotFound />} />
-            </Routes>
+            <Router basename={process.env.PUBLIC_URL}>
+              <Routes>
+                <Route path="/" index element={<Characters />} />
+                <Route path="/character/:id" element={<CharacterDetails />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/*" element={<NotFound />} />
+              </Routes>
+            </Router>
           </main>
           <Footer />
         </CharacterProvider>
