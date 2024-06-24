@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { UserProvider } from "./Components/Contexts/UserContext";
 import { CharacterProvider } from "./Components/Contexts/CharacterContext";
 import Characters from "./Components/Characters";
@@ -12,24 +12,24 @@ import CharacterDetails from "./Components/CharacterDetails";
 import "./App.css";
 
 function App() {
-  const basename =
-    process.env.NODE_ENV === "production" ? "/ejemploReactClase" : "";
   return (
     <div className="app-container">
       <UserProvider>
         <CharacterProvider>
           <Header />
           <main>
-            <Router basename={basename}>
-              <Routes>
-                <Route path="/" index element={<Characters />} />
-                <Route path="/character/:id" element={<CharacterDetails />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/*" element={<NotFound />} />
-              </Routes>
-            </Router>
+            <Routes>
+              <Route
+                path="//ejemploReactClase"
+                index
+                element={<Characters />}
+              />
+              <Route path="/character/:id" element={<CharacterDetails />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
           </main>
           <Footer />
         </CharacterProvider>

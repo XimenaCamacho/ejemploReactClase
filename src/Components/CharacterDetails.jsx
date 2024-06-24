@@ -59,7 +59,7 @@ const CharacterDetails = () => {
           </div>
           <div className="button-container">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/ejemploReactClase")}
               className="character_detail-button"
             >
               Volver al inicio
