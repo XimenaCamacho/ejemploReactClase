@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   const basename =
-    process.env.NODE_ENV === "production" ? "/your-repo-name" : "";
+    process.env.NODE_ENV === "production" ? "/ejemploReactClase" : "";
   return (
     <div className="app-container">
       <UserProvider>
